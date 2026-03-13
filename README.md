@@ -17,6 +17,35 @@ Leverage insights from Amazon Brazil’s marketplace to identify:
 These findings can help Amazon India enhance customer experience, tailor offers, and seize new growth opportunities. [web:37][web:41]
 
 ---
+## Import CSV data into tables using pgAdmin 4
+
+Follow these steps for each table (`customers`, `orders`, `order_items`, `products`, `payments`):
+
+1. In the left tree of **pgAdmin 4**, navigate to:
+
+   `Databases → amazon_analysis → Schemas → amazon_brazil → Tables`
+
+2. Right‑click the target table (for example, `customers`) and select **Import/Export Data**.
+
+3. In the **Import/Export Data** dialog:
+
+   - **Import/Export**: `Import`
+   - **Format**: `CSV`
+   - **File name**: browse and select the matching CSV file  
+     (for example, `customers.csv`)
+   - **Encoding**: leave the default (usually `UTF8`)
+   - **Header**: check this if the first row of the CSV contains column names
+   - **Delimiter**: `,` (comma)
+
+4. Click **OK** to start the import.
+
+5. Repeat the same process for the remaining tables:
+
+   - `amazon_brazil.orders`        ← `orders.csv`
+   - `amazon_brazil.order_items`   ← `order_items.csv`
+   - `amazon_brazil.products`      ← `products.csv`
+   - `amazon_brazil.payments`      ← `payments.csv`
+
 
 ## 🗂 Dataset & Schema Overview
 
